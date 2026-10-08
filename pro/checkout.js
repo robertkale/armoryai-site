@@ -8,7 +8,7 @@
 
 // RevenueCat Web Purchase Link (Funnels → Purchase Links → Production URL).
 // Empty until web billing is set up; the page then says checkout opens soon.
-const CHECKOUT_URL = "";
+const CHECKOUT_URL = "https://pay.rev.cat/scmwjyuxuyjasall";
 const API = "https://armory-ai-production.up.railway.app";
 
 const $ = (id) => document.getElementById(id);
