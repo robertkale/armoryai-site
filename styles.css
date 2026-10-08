@@ -140,7 +140,7 @@ img { max-width: 100%; display: block; }
 .fine { color: var(--text-3); font-size: 14px; margin: 16px 0 0; }
 .notice { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 18px 22px; margin: 20px 0 0; color: var(--text-2); }
 .notice-success { border-color: var(--brass); margin: 0; }
-.notice-success h2 { margin: 0 0 8px; }
+.notice-success h2 { margin: 0 0 8px; color: var(--text); }
 .notice-success p { margin: 0; }
 
 /* Pricing (home) */
@@ -186,6 +186,8 @@ img { max-width: 100%; display: block; }
 .trust span:not(:first-child)::before { content: ""; width: 7px; height: 7px; margin-right: 10px; border-radius: 2px; background: var(--brass); transform: rotate(45deg); }
 .trust a { color: var(--text); text-decoration: none; margin-left: 4px; }
 .trust a:hover { text-decoration: underline; }
+
+.pro-tag { display: inline-block; vertical-align: middle; font-size: 12px; font-weight: 700; color: var(--brass); border: 1px solid var(--brass); border-radius: 6px; padding: 0 6px; margin-left: 6px; }
 
 /* Footer */
 .site-footer { border-top: 1px solid var(--border); color: var(--text-3); font-size: 14px; }
