@@ -189,6 +189,13 @@ img { max-width: 100%; display: block; }
 
 .pro-tag { display: inline-block; vertical-align: middle; font-size: 12px; font-weight: 700; color: var(--brass); border: 1px solid var(--brass); border-radius: 6px; padding: 0 6px; margin-left: 6px; }
 
+/* Batch import (home) */
+.split { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 56px; align-items: center; }
+.phone-sm { width: min(280px, 72vw); }
+.eyebrow-dark { color: var(--brass); font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 12px; }
+.split .tier-list { margin-top: 0; }
+@media (max-width: 760px) { .split { grid-template-columns: 1fr; gap: 32px; } }
+
 /* Footer */
 .site-footer { border-top: 1px solid var(--border); color: var(--text-3); font-size: 14px; }
 .site-footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; padding-top: 28px; padding-bottom: 28px; }
