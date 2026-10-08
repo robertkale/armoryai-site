@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Armory AI Pro</title>
+  <meta name="description" content="Get Armory AI Pro: unlimited AI identification, batch photo import, an insurance-ready PDF report and document storage.">
+  <meta property="og:title" content="Armory AI Pro">
+  <meta property="og:description" content="Unlimited AI identification, batch import and an insurance-ready PDF report for your collection.">
+  <meta property="og:image" content="https://armoryai.app/assets/icon.png">
+  <meta property="og:url" content="https://armoryai.app/pro/">
+  <meta name="theme-color" content="#0e1420">
+  <link rel="icon" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/"><img src="/assets/icon.png" alt="">Armory AI</a>
+      <nav class="nav" aria-label="Main">
+        <a href="/#features">Features</a>
+        <a href="/pro/" aria-current="page">Pro</a>
+        <a href="/support/">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero-compact">
+      <div class="wrap">
+        <div>
+          <p class="eyebrow">Armory AI Pro</p>
+          <h1>Your collection, documented for when it matters.</h1>
+          <p class="lede">Unlimited AI identification, batch photo import, an insurance-ready PDF report and receipts on every item.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap checkout">
+        <div id="success" class="notice notice-success" hidden>
+          <h2>You're Pro.</h2>
+          <p>Open Armory AI on your iPhone and sign in with the same email. Pro is already on your account. If you don't see it right away, go to Profile and pull to refresh.</p>
+        </div>
+
+        <form id="checkout" novalidate>
+          <fieldset class="step">
+            <legend><span class="step-num">1</span> Choose a plan</legend>
+            <div class="plans" role="radiogroup" aria-label="Plan">
+              <label class="plan">
+                <input type="radio" name="plan" value="$rc_annual" checked>
+                <span class="plan-body">
+                  <span class="plan-top"><strong>Yearly</strong><span class="pill">Save 44%</span></span>
+                  <span class="plan-price">$39.99<small> / year</small></span>
+                  <span class="plan-note">1-week free trial, then $39.99 a year</span>
+                </span>
+              </label>
+              <label class="plan">
+                <input type="radio" name="plan" value="$rc_monthly">
+                <span class="plan-body">
+                  <span class="plan-top"><strong>Monthly</strong></span>
+                  <span class="plan-price">$5.99<small> / month</small></span>
+                  <span class="plan-note">Cancel any time</span>
+                </span>
+              </label>
+            </div>
+            <label class="field">
+              <span>Promo code <small>(optional)</small></span>
+              <input id="code" name="code" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="e.g. FRIENDS20">
+              <small class="hint">A promo code replaces the free trial. You'll see the discounted price at checkout.</small>
+            </label>
+          </fieldset>
+
+          <fieldset class="step">
+            <legend><span class="step-num">2</span> Your Armory AI account</legend>
+            <p class="muted">Pro is added to this account, so use the email you sign in to the app with.</p>
+            <div class="tabs" role="tablist">
+              <button type="button" role="tab" id="tab-signin" aria-selected="true">I have an account</button>
+              <button type="button" role="tab" id="tab-signup" aria-selected="false">Create one</button>
+            </div>
+            <label class="field">
+              <span>Email</span>
+              <input id="email" type="email" autocomplete="email" required>
+            </label>
+            <label class="field">
+              <span>Password</span>
+              <input id="password" type="password" autocomplete="current-password" required>
+              <small class="hint" id="password-hint" hidden>At least 8 characters.</small>
+            </label>
+            <label class="check" id="terms-row" hidden>
+              <input type="checkbox" id="terms">
+              <span>I agree to the <a href="/terms/" target="_blank">Terms</a> and <a href="/privacy/" target="_blank">Privacy Policy</a>.</span>
+            </label>
+          </fieldset>
+
+          <p id="error" class="error" role="alert" hidden></p>
+          <button id="submit" class="button" type="submit">Continue to secure checkout</button>
+          <p class="fine">Payment is processed securely by Stripe through RevenueCat. Subscriptions renew automatically until cancelled; cancel any time from the link in your receipt email. Bought in the app instead? It's the same Pro, and you don't need both.</p>
+          <p id="not-ready" class="notice" hidden>Web checkout opens soon. Questions? <a href="mailto:support@armoryai.app">support@armoryai.app</a></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 American Code. Armory AI is a product of American Code.</span>
+      <nav aria-label="Footer">
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+        <a href="/support/">Support</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="/pro/checkout.js"></script>
+</body>
+</html>

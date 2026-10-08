@@ -10,6 +10,7 @@
   --brass: #e4b65e;
   --on-brass: #161006;
   --hero: #1d3157;
+  --danger: #ff7a70;
   --max: 1080px;
   color-scheme: dark;
 }
@@ -25,11 +26,13 @@
     --brass: #8a5a12;
     --on-brass: #ffffff;
     --hero: #16233d;
+    --danger: #b42318;
     color-scheme: light;
   }
 }
 
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
@@ -100,6 +103,45 @@ img { max-width: 100%; display: block; }
 .prose ul { padding-left: 20px; }
 .contact-card { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 24px 28px; margin: 24px 0 8px; }
 .contact-card a { font-size: 20px; font-weight: 600; }
+
+/* Pro checkout (website/pro/) */
+.hero-compact .wrap { grid-template-columns: 1fr; padding-top: 56px; padding-bottom: 56px; }
+.hero-compact h1 { font-size: clamp(32px, 5vw, 48px); max-width: 20ch; }
+.checkout { max-width: 640px; }
+.hero-compact + .section { padding-top: 48px; }
+.step { border: 0; padding: 0; margin: 0 0 36px; min-width: 0; }
+.step legend { display: flex; align-items: center; gap: 12px; font-size: 21px; font-weight: 700; margin-bottom: 16px; padding: 0; }
+.step-num { width: 28px; height: 28px; border-radius: 50%; background: var(--brass); color: var(--on-brass); display: grid; place-items: center; font-size: 15px; }
+.plans { display: grid; gap: 12px; margin-bottom: 20px; }
+.plan { display: block; cursor: pointer; }
+.plan input { position: absolute; opacity: 0; pointer-events: none; }
+.plan-body { display: grid; grid-template-columns: 1fr auto; gap: 2px 16px; align-items: center; background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 18px 22px; }
+.plan input:checked + .plan-body { border: 2px solid var(--brass); padding: 17px 21px; }
+.plan input:focus-visible + .plan-body { outline: 2px solid var(--brass); outline-offset: 3px; }
+.plan-top { display: flex; align-items: center; gap: 10px; }
+.plan-price { grid-row: span 2; font-size: 26px; font-weight: 700; }
+.plan-price small { font-size: 15px; font-weight: 400; color: var(--text-2); }
+.plan-note { color: var(--text-2); font-size: 15px; }
+.pill { background: var(--brass); color: var(--on-brass); font-size: 13px; font-weight: 700; border-radius: 999px; padding: 2px 10px; }
+.field { display: grid; gap: 6px; margin-bottom: 16px; font-weight: 600; font-size: 15px; }
+.field small { font-weight: 400; color: var(--text-3); }
+.field input { font: inherit; font-weight: 400; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; width: 100%; }
+.field input:focus { outline: 2px solid var(--brass); outline-offset: 1px; border-color: transparent; }
+.field .hint { color: var(--text-3); font-size: 14px; }
+.muted { color: var(--text-2); margin: 0 0 16px; }
+.tabs { display: flex; gap: 6px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 4px; margin-bottom: 18px; }
+.tabs button { flex: 1; font: inherit; font-size: 15px; font-weight: 600; color: var(--text-2); background: none; border: 0; border-radius: 9px; padding: 9px; cursor: pointer; }
+.tabs button[aria-selected="true"] { background: var(--surface-2); color: var(--text); }
+.check { display: flex; gap: 10px; align-items: flex-start; color: var(--text-2); font-size: 15px; margin-bottom: 8px; }
+.check input { margin-top: 5px; accent-color: var(--brass); }
+.button { width: 100%; font: inherit; font-weight: 700; color: var(--on-brass); background: var(--brass); border: 0; border-radius: 14px; padding: 15px; cursor: pointer; }
+.button:disabled { opacity: 0.55; cursor: default; }
+.error { color: var(--danger); margin: 0 0 14px; }
+.fine { color: var(--text-3); font-size: 14px; margin: 16px 0 0; }
+.notice { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 18px 22px; margin: 20px 0 0; color: var(--text-2); }
+.notice-success { border-color: var(--brass); margin: 0; }
+.notice-success h2 { margin: 0 0 8px; }
+.notice-success p { margin: 0; }
 
 /* Footer */
 .site-footer { border-top: 1px solid var(--border); color: var(--text-3); font-size: 14px; }
