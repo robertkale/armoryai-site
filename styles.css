@@ -164,14 +164,19 @@ img { max-width: 100%; display: block; }
 /* How it works (home) */
 .steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .step-card { position: relative; }
-.step-card img { width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; object-position: top; border-radius: 22px; border: 1px solid var(--border); background: var(--surface); }
-.step-n { position: absolute; top: 14px; left: 14px; width: 32px; height: 32px; border-radius: 50%; background: var(--brass); color: var(--on-brass); display: grid; place-items: center; font-weight: 700; }
+.step-card { text-align: center; }
+.step-card img { width: min(240px, 100%); height: auto; aspect-ratio: 600 / 1244; object-fit: cover; object-position: top; margin: 0 auto; border-radius: 30px; padding: 7px; background: #05080d; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35), inset 0 0 0 1px #2a364a; }
+.step-n { position: absolute; top: -10px; left: calc(50% - 132px); width: 32px; height: 32px; border-radius: 50%; background: var(--brass); color: var(--on-brass); display: grid; place-items: center; font-weight: 700; }
 .step-card h3 { margin: 18px 0 4px; font-size: 20px; }
 .step-card p { margin: 0; color: var(--text-2); }
 .steps-cta { display: flex; align-items: center; gap: 20px; margin: 36px 0 0; }
 .button-inline { width: auto; display: inline-block; padding: 14px 34px; text-decoration: none; }
 .band-soft { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 .band-soft .card { background: var(--bg); }
+
+.button-hero { font-size: 18px; padding: 15px 30px; }
+.hero-note { color: #a3aec0; font-size: 15px; margin: 16px 0 0; max-width: 40ch; }
+.nav-cta { background: var(--brass); color: var(--on-brass) !important; font-weight: 700; padding: 4px 14px; border-radius: 999px; }
 
 /* Footer */
 .site-footer { border-top: 1px solid var(--border); color: var(--text-3); font-size: 14px; }
@@ -182,7 +187,6 @@ img { max-width: 100%; display: block; }
 @media (max-width: 760px) {
   .hero .wrap { grid-template-columns: 1fr; padding-top: 48px; padding-bottom: 56px; gap: 40px; }
   .grid, .checks, .tiers, .steps { grid-template-columns: 1fr; }
-  .step-card img { aspect-ratio: 4 / 5; }
   .section { padding: 56px 0; }
   .nav { gap: 14px; font-size: 14px; }
 }
