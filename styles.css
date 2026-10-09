@@ -47,11 +47,11 @@ img { max-width: 100%; display: block; }
 .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
 
 /* Header */
-.site-header { border-bottom: 1px solid var(--border); }
-.site-header .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-.brand { display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-weight: 700; font-size: 18px; }
+.site-header { border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 10; background: rgba(14, 20, 32, 0.85); -webkit-backdrop-filter: saturate(160%) blur(14px); backdrop-filter: saturate(160%) blur(14px); }
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 64px; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-weight: 700; font-size: 18px; white-space: nowrap; flex: none; }
 .brand img { width: 32px; height: 32px; border-radius: 8px; }
-.nav { display: flex; gap: 20px; font-size: 15px; }
+.nav { display: flex; align-items: center; gap: 20px; font-size: 15px; white-space: nowrap; }
 .nav a { color: var(--text-2); text-decoration: none; }
 .nav a:hover, .nav a[aria-current="page"] { color: var(--text); }
 
@@ -176,7 +176,7 @@ img { max-width: 100%; display: block; }
 
 .button-hero { font-size: 18px; padding: 15px 30px; }
 .hero-note { color: #a3aec0; font-size: 15px; margin: 16px 0 0; max-width: 40ch; }
-.nav-cta { background: var(--brass); color: var(--on-brass) !important; font-weight: 700; padding: 4px 14px; border-radius: 999px; }
+.nav-cta { background: var(--brass); color: var(--on-brass) !important; font-weight: 700; padding: 6px 16px; border-radius: 999px; }
 
 /* USA touches */
 .flag { display: inline-block; vertical-align: -1px; margin-right: 8px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15); }
@@ -208,4 +208,32 @@ img { max-width: 100%; display: block; }
   .trust .wrap { justify-content: flex-start; }
   .section { padding: 56px 0; }
   .nav { gap: 14px; font-size: 14px; }
+}
+
+/* Phones: logo and Get Pro in the header (Support is in the footer), and
+   full-width calls to action. */
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  .wrap { padding: 0 16px; }
+  .site-header .wrap { height: 56px; }
+  .brand { font-size: 17px; }
+  .brand img { width: 30px; height: 30px; }
+  .nav { gap: 16px; font-size: 15px; }
+  .nav a:not(.nav-cta):not(.nav-keep):not([aria-current]) { display: none; }
+  .hero .wrap { padding-top: 36px; padding-bottom: 48px; gap: 36px; }
+  .eyebrow, .eyebrow-dark { font-size: 12px; letter-spacing: 0.08em; line-height: 1.5; }
+  .hero h1 { font-size: 40px; }
+  .hero .lede { font-size: 18px; margin-bottom: 26px; }
+  .cta { flex-direction: column; align-items: stretch; gap: 14px; }
+  .cta .button-inline, .button-hero { display: block; width: 100%; text-align: center; }
+  .cta .link-cta { text-align: center; }
+  .hero-note { text-align: center; max-width: none; }
+  .steps-cta { flex-direction: column; align-items: stretch; gap: 14px; text-align: center; }
+  .steps-cta .button-inline { display: block; text-align: center; }
+  .card, .tier { padding: 22px; }
+  .tier-pro { padding: 21px; }
+  .tier-price { font-size: 34px; }
+  .trust .wrap { font-size: 14px; gap: 8px 20px; }
+  .site-footer .wrap { flex-direction: column; }
+  .site-footer nav { flex-wrap: wrap; gap: 10px 20px; }
 }
