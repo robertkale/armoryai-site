@@ -46,7 +46,8 @@ function showError(message) {
 
 async function authenticate(email, password) {
   const path = mode === "signup" ? "/api/auth/register" : "/api/auth/login";
-  const body = mode === "signup" ? { email, password, acceptTerms: true } : { email, password };
+  // checkout: true checks the password without signing this browser in.
+  const body = mode === "signup" ? { email, password, acceptTerms: true, checkout: true } : { email, password, checkout: true };
   const res = await fetch(API + path, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
