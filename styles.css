@@ -315,6 +315,10 @@ img { max-width: 100%; display: block; }
 }
 
 /* Every screen: phone, iPad and desktop in one picture. */
+/* Why we built it: a short story, centered, with less space below. */
+.story { text-align: center; padding-bottom: 32px; }
+.story .sub { margin: 0 auto 16px; }
+.story .sub:last-child { margin-bottom: 0; }
 .everywhere { text-align: center; }
 .everywhere .sub { margin-left: auto; margin-right: auto; }
 .everywhere .sub a { color: var(--brass); }
